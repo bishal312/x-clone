@@ -6,7 +6,15 @@ const app = express()
 
 const PORT = ENV.PORTs || 3000;
 
-connectDB();
+const startServer = async () => {
+  try {
+    await connectDB();
+  } catch (error) {
+    console.log("Error while starting server.", error.message);
+  }
+};
+startServer();
+
 app.get("/", (req, res) =>{
   res.send("Hello, world!")
 })
