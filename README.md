@@ -10,7 +10,7 @@ This project is all about **cloning X** (e.g., Twitter/X). The goal is to recrea
 - **Express.js** (REST API)
 - **MongoDB** (Database)
 - **React Native with Expo** (Mobile App - Android/iOS)
-- **JWT** (Authentication)
+- **Clerk** (Authentication)
 - **Mongoose** (MongoDB ODM)
 
 ---
