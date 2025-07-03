@@ -71,14 +71,14 @@ export const followUser = asyncHandler(async(req, res)=> {
       $pull: {following: targetUserId},
     });
     await User.findByIdAndUpdate(targetUserId, {
-      $pull: {following:currentUser._id},
+      $pull: {followers:currentUser._id},
     });
   }else{
     await User.findByIdAndUpdate(currentUser._id, {
       $push: {following:targetUserId},
     });
     await User.findByIdAndUpdate(targetUserId,{
-      $push: {following:currentUser._id},
+      $push: {followers:currentUser._id},
     });
 
     await Notification.create({
